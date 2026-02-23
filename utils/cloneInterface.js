@@ -31,8 +31,6 @@ function cloneArray(element) {
   for (let i = 0; i < element.length; i++) {
     const arrayType = analyzeArray(element[i]);
 
-    let recurse = true;
-
     // Determine whether to recurse based on the arrayType
     if (arrayType === "array") processArray(element[i]);
     if (arrayType === "object") processObj(element[i]);
