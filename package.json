@@ -1,0 +1,21 @@
+{
+  "name": "ramon-vanilla",
+  "version": "1.0.0",
+  "description": "\"A collection of lightweight, vanilla JavaScript utility functions for validation, data cleaning, and object manipulation.\"",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevRamon83/ramon-vanilla.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevRamon83/ramon-vanilla/issues"
+  },
+  "homepage": "https://github.com/DevRamon83/ramon-vanilla#readme"
+}
