@@ -1,3 +1,3 @@
-export { analyzeArray } from "./analyzeArray";
-export { capitalize } from "./atomicUtils";
-export { cloneInterface } from "./cloneInterface";
+export { analyzeArray } from "./analyzeArray.js";
+export { capitalize } from "./atomicUtils.js";
+export { cloneInterface } from "./cloneInterface.js";

@@ -6,10 +6,10 @@ export {
   tooLong,
   tooShort,
   typeChecker,
-} from "./atomicValidators";
+} from "./atomicValidators.js";
 export {
   confirmPasswordValidator,
   emailValidator,
   passwordValidator,
   usernameValidator,
-} from "./authValidators";
+} from "./authValidators.js";
