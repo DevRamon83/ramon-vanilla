@@ -1,0 +1,42 @@
+import { acceptOnly } from "../validators";
+
+export const isValidTime = (value, dev) => {
+  if (dev) {
+    console.info("isValidTime function");
+    console.info("param value: string (HH:mm)");
+  }
+
+  if (value.length !== 5) {
+    return false;
+  }
+
+  if (value[2] !== ":") {
+    return false;
+  }
+
+  const time = value.split(":");
+  const validChars = "0-9";
+  const isValidHours = acceptOnly(time[0], validChars);
+  const isValidMinutes = acceptOnly(time[1], validChars);
+
+  if (!isValidHours) {
+    return false;
+  }
+
+  if (!isValidMinutes) {
+    return false;
+  }
+
+  const hours = parseInt(time[0]);
+  const minutes = parseInt(time[1]);
+
+  if (hours < 0 || hours > 23) {
+    return false;
+  }
+
+  if (minutes < 0 || minutes > 59) {
+    return false;
+  }
+
+  return true;
+};

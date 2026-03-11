@@ -2,7 +2,6 @@ export {
   acceptOnly,
   atLeastOne,
   isObjValid,
-  isLeapYear,
   tooLong,
   tooShort,
   typeChecker,

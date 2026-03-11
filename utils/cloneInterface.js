@@ -4,6 +4,7 @@ import { analyzeArray } from "./analyzeArray";
 const caller = ["CloneInterface"];
 const noElementMsgg = ": you must send an element to clone";
 
+// need a serious review
 export const errorHandler = (caller, message) => {
   console.error(caller, message);
 };
