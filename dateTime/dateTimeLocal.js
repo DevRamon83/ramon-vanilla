@@ -5,7 +5,6 @@ import { isValidTime } from "./time";
 export const isValidDateTimeLocal = (value, info) => {
   if (info) explainIsValidDateTimeLocal();
   let separator = null;
-  console.log("value ", value);
 
   if (value.includes("T")) {
     separator = "T";
@@ -34,13 +33,11 @@ export const isValidDateTimeLocal = (value, info) => {
   if (!validDate.isValid) return { isValid: false, why: validDate.why };
 
   const timeString = elements[1];
-  let time = null;
+  let time = timeString.substring(0, 5);
 
   if (seconds) {
-    time = timeString.substring(0, 5);
     seconds = timeString.substring(6, 8);
   }
-  console.log("time ", time);
 
   let invalidSeconds = null;
 
