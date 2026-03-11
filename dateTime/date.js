@@ -14,7 +14,7 @@ const consoleHandler = () => {
   console.group("🔍 Details: isValidDate");
   explainIsValidDate();
   param("value", "string || number");
-  param("base", "zero || any");
+  param("base", `"zero" || any`);
   paramExplained(baseText);
   explainDateReturn();
   console.groupEnd();

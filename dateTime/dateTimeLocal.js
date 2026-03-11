@@ -39,6 +39,7 @@ export const isValidDateTimeLocal = (value, info) => {
     time = timeString.substring(0, 5);
     seconds = timeString.substring(6, 8);
   }
+  console.log("time ", time);
 
   let invalidSeconds = null;
 
