@@ -19,7 +19,7 @@ import {
 
 export const registry = () => {
   console.log(
-    "%cNOTE: functions marked with 🔍 provide extra docs. Pass 'true' as the 'info' parameter (last, optional).",
+    "%cNOTE:%c functions marked with 🔍 provide extra docs. Pass 'true' as the 'info' parameter (last, optional).",
     noteStyle,
   );
 
