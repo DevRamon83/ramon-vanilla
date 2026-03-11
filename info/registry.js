@@ -1,44 +1,55 @@
 import {
+  explainIsLeapYear,
+  explainIsShortMonth,
+  explainIsValidDate,
+  explainIsValidDateTimeLocal,
+  explainIsValidMonth,
+  explainIsValidTime,
+} from "./explain/dateTime";
+import { headerStyle, noteStyle } from "./styles";
+import { explainCapitalize } from "./explain/utils";
+import {
   explainAcceptOnly,
   explainAtLeastOne,
   explainIsObjValid,
   explainTooLong,
   explainTooShort,
   explainTypeChecker,
-} from "./explainFuncs";
+} from "./explain/validators";
 
 export const registry = () => {
-  const headerStyle =
-    "font-weight: bold; color: #333; text-decoration: underline;";
-  const funcStyle = "font-weight: bold; color: #000;";
-  const descStyle = "color: #666; font-style: italic;";
-  const noteStyle = "color: #ff000;";
-
   console.log(
     "%cNOTE: functions marked with 🔍 provide extra docs. Pass 'true' as the 'info' parameter (last, optional).",
     noteStyle,
   );
+
+  // --- DateTime ---
+
   console.groupCollapsed("%cDATETIME", headerStyle);
-  console.info(
-    "%ccapitalize() ➡️ %creturns the string with the first letter capitalized",
-    funcStyle,
-    descStyle,
-  );
+  explainIsLeapYear();
+  explainIsShortMonth();
+  explainIsValidDate();
+  explainIsValidDateTimeLocal();
+  explainIsValidMonth();
+  explainIsValidTime();
   console.groupEnd();
+
+  // --- Validators ---
 
   console.groupCollapsed("%cVALIDATORS", headerStyle);
 
   explainAcceptOnly();
   explainAtLeastOne();
-  explainTooShort();
-  explainTooLong();
-  explainTypeChecker();
   explainIsObjValid();
+  explainTooLong();
+  explainTooShort();
+  explainTypeChecker();
 
   console.groupEnd();
 
-  // --- Gruppo Utils ---
+  // --- Utils ---
   console.groupCollapsed("%cUTILS", headerStyle);
+  explainCapitalize();
 
   console.groupEnd();
 };

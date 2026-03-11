@@ -1,10 +1,8 @@
+import { explainIsValidTime } from "../info/explain/dateTime";
 import { acceptOnly } from "../validators";
 
-export const isValidTime = (value, dev) => {
-  if (dev) {
-    console.info("isValidTime function");
-    console.info("param value: string (HH:mm)");
-  }
+export const isValidTime = (value, info) => {
+  if (info) explainIsValidTime();
 
   if (value.length !== 5) {
     return false;

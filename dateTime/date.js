@@ -1,3 +1,7 @@
+import { param, paramExplained } from "../info/commons";
+import { explainIsValidDate } from "../info/explain/dateTime";
+import { explainDateReturn } from "../info/returns/dateReturns";
+import { baseText } from "../info/texts";
 import { isLeapYear, isShortMonth } from "./atomics";
 import {
   charsChecker,
@@ -6,7 +10,19 @@ import {
   limitsChecker,
 } from "./helpers";
 
-export const isValidDate = (value, base, dev) => {
+const consoleHandler = () => {
+  console.group("🔍 Details: isValidDate");
+  explainIsValidDate();
+  param("value", "string || number");
+  param("base", "zero || any");
+  paramExplained(baseText);
+  explainDateReturn();
+  console.groupEnd();
+};
+
+export const isValidDate = (value, base, info) => {
+  if (info) consoleHandler();
+
   const formalCheck = lengthAndFormatChecker(value);
   if (!formalCheck.isValid) return { isValid: false, why: formalCheck.why };
 

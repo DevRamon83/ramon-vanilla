@@ -1,4 +1,11 @@
-export const isLeapYear = (year, dev) => {
+import {
+  explainIsLeapYear,
+  explainIsShortMonth,
+  explainIsValidMonth,
+} from "../info/explain/dateTime";
+
+export const isLeapYear = (year, info) => {
+  if (info) explainIsLeapYear();
   const normalizeYear = parseInt(year);
 
   return (
@@ -7,7 +14,8 @@ export const isLeapYear = (year, dev) => {
   );
 };
 
-export const isShortMonth = (month, base, dev) => {
+export const isShortMonth = (month, base, info) => {
+  if (info) explainIsShortMonth();
   const normalizeMonth = parseInt(month);
   if (base === "zero") {
     const shortMonths = [3, 5, 8, 10];
@@ -21,7 +29,8 @@ export const isShortMonth = (month, base, dev) => {
   );
 };
 
-export const isValidMonth = (month, base, dev) => {
+export const isValidMonth = (month, base, info) => {
+  if (info) explainIsValidMonth();
   const normalizeMonth = parseInt(month);
   if (base === "zero") {
     return normalizeMonth >= 0 && normalizeMonth < 12;

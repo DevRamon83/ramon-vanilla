@@ -1,7 +1,9 @@
+import { explainIsValidDateTimeLocal } from "../info/explain/dateTime";
 import { isValidDate } from "./date";
 import { isValidTime } from "./time";
 
-export const dateTimeLocal = (value) => {
+export const isValidDateTimeLocal = (value, info) => {
+  if (info) explainIsValidDateTimeLocal();
   let separator = null;
 
   if (value.includes("T")) {

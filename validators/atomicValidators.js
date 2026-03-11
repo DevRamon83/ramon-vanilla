@@ -1,14 +1,26 @@
-export const acceptOnly = (string, setCharacters) => {
+import {
+  explainAcceptOnly,
+  explainAtLeastOne,
+  explainIsObjValid,
+  explainTooLong,
+  explainTooShort,
+  explainTypeChecker,
+} from "../info/explain/validators";
+
+export const acceptOnly = (string, setCharacters, info) => {
+  if (info) explainAcceptOnly();
   const regex = new RegExp(`^[${setCharacters}]+$`);
   return regex.test(string);
 };
 
-export const atLeastOne = (string, setCharacters) => {
+export const atLeastOne = (string, setCharacters, info) => {
+  if (info) explainAtLeastOne();
   const regex = new RegExp(`[${setCharacters}]`);
   return regex.test(string);
 };
 
-export const tooShort = (string, num) => {
+export const tooShort = (string, num, info) => {
+  if (info) explainTooShort();
   const length = string.length;
 
   if (length < num) {
@@ -18,7 +30,8 @@ export const tooShort = (string, num) => {
   }
 };
 
-export const tooLong = (string, num) => {
+export const tooLong = (string, num, info) => {
+  if (info) explainTooLong();
   const length = string.length;
 
   if (length > num) {
@@ -28,7 +41,8 @@ export const tooLong = (string, num) => {
   }
 };
 
-export const typeChecker = (datum, type) => {
+export const typeChecker = (datum, type, info) => {
+  if (info) explainTypeChecker();
   const yourType = typeof datum;
   const cleanType = type.toLowerCase();
 
@@ -45,7 +59,8 @@ export const typeChecker = (datum, type) => {
   return false;
 };
 
-export const isObjValid = (obj) => {
+export const isObjValid = (obj, info) => {
+  if (info) explainIsObjValid();
   if (!obj) return false;
   return Object.keys(obj).length > 0;
 };
