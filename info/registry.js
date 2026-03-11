@@ -12,8 +12,13 @@ export const registry = () => {
     "font-weight: bold; color: #333; text-decoration: underline;";
   const funcStyle = "font-weight: bold; color: #000;";
   const descStyle = "color: #666; font-style: italic;";
+  const noteStyle = "color: #ff000;";
 
-  console.group("%cDATETIME", headerStyle);
+  console.log(
+    "%cNOTE: functions marked with 🔍 provide extra docs. Pass 'true' as the 'info' parameter (last, optional).",
+    noteStyle,
+  );
+  console.groupCollapsed("%cDATETIME", headerStyle);
   console.info(
     "%ccapitalize() ➡️ %creturns the string with the first letter capitalized",
     funcStyle,
@@ -21,7 +26,7 @@ export const registry = () => {
   );
   console.groupEnd();
 
-  console.group("%cVALIDATORS", headerStyle);
+  console.groupCollapsed("%cVALIDATORS", headerStyle);
 
   explainAcceptOnly();
   explainAtLeastOne();
@@ -33,7 +38,7 @@ export const registry = () => {
   console.groupEnd();
 
   // --- Gruppo Utils ---
-  console.group("%cUTILS", headerStyle);
+  console.groupCollapsed("%cUTILS", headerStyle);
 
   console.groupEnd();
 };
