@@ -13,7 +13,7 @@ import {
 const consoleHandler = () => {
   console.group("🔍 Details: isValidDate");
   explainIsValidDate();
-  param("value", "string || number");
+  param("value", "string");
   param("base", `"zero" || any`);
   paramExplained(baseText);
   explainDateReturn();

@@ -1,14 +1,29 @@
+import { param, paramExplained } from "../info/commons";
 import { explainIsValidDateTimeLocal } from "../info/explain/dateTime";
+import { explainDateReturn } from "../info/returns/dateReturns";
+import { baseText, strictDateLocal } from "../info/texts";
 import { isValidDate } from "./date";
 import { isValidTime } from "./time";
 
-export const isValidDateTimeLocal = (value, info) => {
-  if (info) explainIsValidDateTimeLocal();
+const consoleHandler = () => {
+  console.group("🔍 Details: isValidDate");
+  explainIsValidDateTimeLocal();
+  param("value", "string");
+  param("strict", "boolean");
+  paramExplained(strictDateLocal);
+  param("base", `"zero" || any`);
+  paramExplained(baseText);
+  explainDateReturn();
+  console.groupEnd();
+};
+
+export const isValidDateTimeLocal = (value, strict, info) => {
+  if (info) consoleHandler();
   let separator = null;
 
   if (value.includes("T")) {
     separator = "T";
-  } else if (value.includes(" ")) {
+  } else if (value.includes(" ") && !strict) {
     separator = " ";
   }
 

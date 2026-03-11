@@ -34,7 +34,7 @@ export const explainIsValidDate = () => {
 
 export const explainIsValidDateTimeLocal = () => {
   console.info(
-    "🔍 %cisValidDateTimeLocal(value, info) ➡️ %creturns an object validating the date and specifying why if invalid",
+    "🔍 %cisValidDateTimeLocal(value, strict, info) ➡️ %creturns an object validating the date and specifying why if invalid",
     funcStyle,
     descStyle,
   );
