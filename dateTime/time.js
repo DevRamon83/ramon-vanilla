@@ -3,7 +3,7 @@ import { acceptOnly } from "../validators";
 
 export const isValidTime = (value, info) => {
   if (info) explainIsValidTime();
-
+  console.log("value time ", value);
   if (value.length !== 5) {
     return false;
   }
