@@ -1,9 +1,4 @@
-import {
-  explainedStyle,
-  funcStyle,
-  pointStyle,
-  typeStyle,
-} from "./explain/styles";
+import { explainedStyle, funcStyle, pointStyle, typeStyle } from "./styles";
 
 export const param = (paramName, paramType) => {
   console.log(
