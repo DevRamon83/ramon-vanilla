@@ -11,7 +11,9 @@ import { explainCapitalize } from "./explain/utils";
 import {
   explainAcceptOnly,
   explainAtLeastOne,
+  explainAuthValidator,
   explainIsObjValid,
+  explainMatcher,
   explainTooLong,
   explainTooShort,
   explainTypeChecker,
@@ -44,6 +46,10 @@ export const registry = () => {
   explainTooLong();
   explainTooShort();
   explainTypeChecker();
+  explainAuthValidator("username");
+  explainAuthValidator("email");
+  explainAuthValidator("password");
+  explainMatcher();
 
   console.groupEnd();
 

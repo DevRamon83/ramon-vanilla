@@ -34,7 +34,7 @@ export const explainTooLong = () => {
 
 export const explainTypeChecker = () => {
   console.info(
-    "%ctypeChecker(datum, type, info) ➡️ %ctrue if the datum matches the expected primitive",
+    "%ctypeChecker(datum, type, info) ➡️ %creturns true if the datum matches the expected primitive",
     funcStyle,
     descStyle,
   );
@@ -43,6 +43,23 @@ export const explainTypeChecker = () => {
 export const explainIsObjValid = () => {
   console.info(
     "%cisObjValid(obj, info) ➡️ %creturns true if the object is not null and not empty",
+    funcStyle,
+    descStyle,
+  );
+};
+
+export const explainAuthValidator = (caller) => {
+  const validator = caller + "Validator";
+  console.info(
+    `%c${validator}(${caller}, info) ➡️ %creturns an object with two properties: a boolean error and an array errorArray`,
+    funcStyle,
+    descStyle,
+  );
+};
+
+export const explainMatcher = () => {
+  console.info(
+    "%cmatcher(string, string, info) ➡️ %cTakes two IDs as strings and returns true if both input values match",
     funcStyle,
     descStyle,
   );

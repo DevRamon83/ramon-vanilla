@@ -7,7 +7,7 @@ export {
   typeChecker,
 } from "./atomicValidators.js";
 export {
-  confirmPasswordValidator,
+  matcher,
   emailValidator,
   passwordValidator,
   usernameValidator,
