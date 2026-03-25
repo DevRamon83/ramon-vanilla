@@ -1,3 +1,4 @@
+import { invalidEmailChars } from "../arrays/invalidEmailChars.js";
 import {
   atLeastLowerCase,
   atLeastNumber,
