@@ -1,5 +1,5 @@
 import { explainIsValidTime } from "../info/explain/dateTime.js";
-import { acceptOnly } from "../validators.js";
+import { acceptOnly } from "../validators/atomicValidators.js";
 
 export const isValidTime = (value, info) => {
   if (info) explainIsValidTime();
