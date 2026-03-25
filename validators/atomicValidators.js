@@ -5,7 +5,7 @@ import {
   explainTooLong,
   explainTooShort,
   explainTypeChecker,
-} from "../info/explain/validators";
+} from "../info/explain/validators.js";
 
 export const acceptOnly = (string, setCharacters, info) => {
   if (info) explainAcceptOnly();

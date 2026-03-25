@@ -1,4 +1,4 @@
-import { explainedStyle, funcStyle, pointStyle, typeStyle } from "./styles";
+import { explainedStyle, funcStyle, pointStyle, typeStyle } from "./styles.js";
 
 export const param = (paramName, paramType) => {
   console.log(
@@ -10,6 +10,5 @@ export const param = (paramName, paramType) => {
 };
 
 export const paramExplained = (text) => {
-  // Aggiungiamo un piccolo rientro visivo (uno spazio) per farlo stare "sotto" al parametro
   console.log(`    %c↳ ${text}`, explainedStyle);
 };

@@ -5,9 +5,9 @@ import {
   explainIsValidDateTimeLocal,
   explainIsValidMonth,
   explainIsValidTime,
-} from "./explain/dateTime";
-import { headerStyle, noteStyle } from "./styles";
-import { explainCapitalize } from "./explain/utils";
+} from "./explain/dateTime.js";
+import { headerStyle, noteStyle } from "./styles.js";
+import { explainCapitalize } from "./explain/utils.js";
 import {
   explainAcceptOnly,
   explainAtLeastOne,
@@ -17,7 +17,7 @@ import {
   explainTooLong,
   explainTooShort,
   explainTypeChecker,
-} from "./explain/validators";
+} from "./explain/validators.js";
 
 export const registry = () => {
   console.log(

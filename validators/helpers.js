@@ -3,7 +3,7 @@ import {
   atLeastNumber,
   atLeastSpecialChars,
   atLeastUpperCase,
-} from "../atomicRegex";
+} from "../atomicRegex.js";
 
 export const isStrongEnough = (password) => {
   const errorMessage = [];

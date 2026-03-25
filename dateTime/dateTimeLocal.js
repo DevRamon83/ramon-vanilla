@@ -1,9 +1,9 @@
-import { param, paramExplained } from "../info/commons";
-import { explainIsValidDateTimeLocal } from "../info/explain/dateTime";
-import { explainDateReturn } from "../info/returns/dateReturns";
-import { baseText, strictDateLocal } from "../info/texts";
-import { isValidDate } from "./date";
-import { isValidTime } from "./time";
+import { param, paramExplained } from "../info/commons.js";
+import { explainIsValidDateTimeLocal } from "../info/explain/dateTime.js";
+import { explainDateReturn } from "../info/returns/dateReturns.js";
+import { baseText, strictDateLocal } from "../info/texts.js";
+import { isValidDate } from "./date.js";
+import { isValidTime } from "./time.js";
 
 const consoleHandler = () => {
   console.group("🔍 Details: isValidDate");

@@ -1,4 +1,4 @@
-import { typeChecker } from "../validators/atomicValidators";
+import { typeChecker } from "../validators/atomicValidators.js";
 
 export const analyzeArray = (element) => {
   if (typeChecker(element, "null")) {

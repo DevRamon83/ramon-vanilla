@@ -1,9 +1,9 @@
 import {
   explainAuthValidator,
   explainMatcher,
-} from "../info/explain/validators";
-import { explainAuthValidatorReturn } from "../info/returns/authReturns";
-import { acceptOnly, tooLong, tooShort } from "./atomicValidators";
+} from "../info/explain/validators.js";
+import { explainAuthValidatorReturn } from "../info/returns/authReturns.js";
+import { acceptOnly, tooLong, tooShort } from "./atomicValidators.js";
 import {
   domainDispatcher,
   emailMissing,
@@ -11,7 +11,7 @@ import {
   isCleanEmail,
   isEmailFake,
   isStrongEnough,
-} from "./helpers";
+} from "./helpers.js";
 
 const consoleHandler = (caller) => {
   const string = caller.replace("Validator", "");

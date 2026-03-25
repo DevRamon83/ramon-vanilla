@@ -1,5 +1,5 @@
-import { typeChecker } from "../validators/atomicValidators";
-import { analyzeArray } from "./analyzeArray";
+import { typeChecker } from "../validators/atomicValidators.js";
+import { analyzeArray } from "./analyzeArray.js";
 
 const caller = ["CloneInterface"];
 const noElementMsgg = ": you must send an element to clone";

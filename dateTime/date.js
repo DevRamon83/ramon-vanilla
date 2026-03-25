@@ -1,14 +1,14 @@
-import { param, paramExplained } from "../info/commons";
-import { explainIsValidDate } from "../info/explain/dateTime";
-import { explainDateReturn } from "../info/returns/dateReturns";
-import { baseText } from "../info/texts";
-import { isLeapYear, isShortMonth } from "./atomics";
+import { param, paramExplained } from "../info/commons.js";
+import { explainIsValidDate } from "../info/explain/dateTime.js";
+import { explainDateReturn } from "../info/returns/dateReturns.js";
+import { baseText } from "../info/texts.js";
+import { isLeapYear, isShortMonth } from "./atomics.js";
 import {
   charsChecker,
   februaryHandler,
   lengthAndFormatChecker,
   limitsChecker,
-} from "./helpers";
+} from "./helpers.js";
 
 const consoleHandler = () => {
   console.group("🔍 Details: isValidDate");

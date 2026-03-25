@@ -1,4 +1,4 @@
-import { acceptOnly } from "../validators";
+import { acceptOnly } from "../validators.js";
 
 const febMonth = (month, base) => {
   if (base === "zero" && month === 1) return true;

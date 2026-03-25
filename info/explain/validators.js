@@ -1,4 +1,4 @@
-import { descStyle, funcStyle } from "../styles";
+import { descStyle, funcStyle } from "../styles.js";
 
 export const explainAcceptOnly = () => {
   console.info(

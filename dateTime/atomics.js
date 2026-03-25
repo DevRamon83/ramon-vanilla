@@ -2,7 +2,7 @@ import {
   explainIsLeapYear,
   explainIsShortMonth,
   explainIsValidMonth,
-} from "../info/explain/dateTime";
+} from "../info/explain/dateTime,js";
 
 export const isLeapYear = (year, info) => {
   if (info) explainIsLeapYear();

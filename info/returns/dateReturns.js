@@ -1,4 +1,4 @@
-import { funcStyle, typeStyle, labelStyle } from "../styles";
+import { funcStyle, typeStyle, labelStyle } from "../styles.js";
 
 export const explainDateReturn = () => {
   console.log("%cReturns: %c[Object]", labelStyle, typeStyle);

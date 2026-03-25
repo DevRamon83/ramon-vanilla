@@ -1,4 +1,4 @@
-import { explainCapitalize } from "../info/explain/utils";
+import { explainCapitalize } from "../info/explain/utils.js";
 
 export const capitalize = (str, info) => {
   if (info) explainCapitalize();
