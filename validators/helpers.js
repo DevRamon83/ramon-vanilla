@@ -4,6 +4,7 @@ import {
   atLeastSpecialChars,
   atLeastUpperCase,
 } from "../atomicRegex.js";
+import { acceptOnly } from "./atomicValidators.js";
 
 export const isStrongEnough = (password) => {
   const errorMessage = [];
