@@ -64,3 +64,11 @@ export const explainMatcher = () => {
     descStyle,
   );
 };
+
+export const explainValidateYoutubeUrl = () => {
+  console.info(
+    "%cvalidateYoutubeUrl(string, info) ➡️ %creturns an object with two properties: a boolean error and videoID",
+    funcStyle,
+    descStyle,
+  );
+};

@@ -17,6 +17,7 @@ import {
   explainTooLong,
   explainTooShort,
   explainTypeChecker,
+  explainValidateYoutubeUrl,
 } from "./explain/validators.js";
 
 export const registry = () => {
@@ -50,6 +51,7 @@ export const registry = () => {
   explainAuthValidator("email");
   explainAuthValidator("password");
   explainMatcher();
+  explainValidateYoutubeUrl();
 
   console.groupEnd();
 

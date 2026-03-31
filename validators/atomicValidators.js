@@ -5,6 +5,7 @@ import {
   explainTooLong,
   explainTooShort,
   explainTypeChecker,
+  explainValidateYoutubeUrl,
 } from "../info/explain/validators.js";
 
 export const acceptOnly = (string, setCharacters, info) => {
@@ -63,4 +64,34 @@ export const isObjValid = (obj, info) => {
   if (info) explainIsObjValid();
   if (!obj) return false;
   return Object.keys(obj).length > 0;
+};
+
+export const validateYoutubeUrl = (url, info) => {
+  if (info) explainValidateYoutubeUrl();
+  const errorMsg = "invalid url";
+  const error = true;
+  const firstPart = url.slice(0, 8);
+  let fromIndex = null;
+  let toIndex = null;
+
+  if (!url) return { error, errorMsg };
+
+  if (firstPart !== "https://") return { error, errorMsg };
+
+  if (url.includes("youtu.be")) {
+    fromIndex = url.indexOf("be/");
+    fromIndex = fromIndex === -1 ? fromIndex : fromIndex + 3;
+    toIndex = url.indexOf("?");
+  } else {
+    fromIndex = url.indexOf("watch?v=");
+    fromIndex = fromIndex === -1 ? fromIndex : fromIndex + 8;
+    toIndex = url.indexOf("&");
+  }
+
+  if (fromIndex === -1) return { error, errorMsg };
+
+  const videoID =
+    toIndex === -1 ? url.slice(fromIndex) : url.slice(fromIndex, toIndex);
+
+  return { error: false, videoID };
 };

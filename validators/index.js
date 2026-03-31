@@ -5,6 +5,7 @@ export {
   tooLong,
   tooShort,
   typeChecker,
+  validateYoutubeUrl,
 } from "./atomicValidators.js";
 export {
   matcher,
