@@ -90,7 +90,7 @@ export const passwordValidator = (password, info) => {
   let errorArray = [];
 
   const isTooShort = tooShort(password, 11);
-  const isTooLong = tooLong(password, 20);
+  const isTooLong = tooLong(password, 65);
 
   if (isTooShort) {
     error = true;
