@@ -55,6 +55,8 @@ export const typeChecker = (datum, type, info) => {
 
   if (cleanType === "null") return datum === null;
 
+  if (cleanType === "number" && yourType === cleanType) return !isNaN(datum);
+
   if (cleanType === yourType) return true;
 
   return false;
