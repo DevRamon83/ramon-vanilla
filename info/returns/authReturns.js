@@ -1,3 +1,5 @@
+import { funcStyle, labelStyle, typeStyle } from "../styles";
+
 export const explainAuthValidatorReturn = () => {
   console.log("%cReturns: %c[Object]", labelStyle, typeStyle);
 
